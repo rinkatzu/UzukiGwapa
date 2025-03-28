@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 50px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: 20px auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .container:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: white;
+            color: #ff758c;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: #ff7eb3;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Centering the audio */
+        .audio-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            width: 250px;
+            outline: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/sl190jiwl0fn9imsvr25q/Ikaw-At-Ako.mp3?rlkey=3il7vuadebzhuv63lpof0vziy&st=9qeskonw&.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="container">
+        <h1>I'm Sorry</h1>
+        <p>Dear Uzuki,</p>
+        <p>I just want to take a moment to say that I'm truly sorry. I never meant to ignore you, and I regret my actions. You mean so much to me, and I hope we can make things right.</p>
+        <p class="heart">❤️</p>
+        <button onclick="alert('I hope you forgive me!')">Forgive Me?</button>
+    </div>
+
+</body>
+</html>
